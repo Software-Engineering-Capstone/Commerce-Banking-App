@@ -40,7 +40,7 @@ export default function Signup() {
                     {/* <div>
                         <img src="/fulllogo.png" alt="Commerce Bank" />
                     </div> */}
-                    <h3 className="text-center mb-4">Sign Up</h3>
+                    <h3 className="text-center mb-4">Create a new account</h3>
                     {error && <Alert variant="danger">{error}</Alert>}
                     <Form onSubmit={handleSubmit}>
                         <Form.Group id="email">
@@ -56,7 +56,7 @@ export default function Signup() {
                             <Form.Control type="password" ref={passwordConfirmRef} required />
                         </Form.Group>
                         <div class="small-padding w-100">
-                            <Button disabled={loading} className="w-100" type="submit">Submit</Button>
+                            <Button disabled={loading} className="w-100" type="submit">Create Account</Button>
                         </div> 
                     </Form>
                 </Card.Body>
