@@ -1,21 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react'
 
-class Home extends Component{
-    constructor(props)
-    {
-        super(props)
-        this.state={
-
-        }
-    }
-    render()
-    {
-        return(
-            <div>
-                <h1>You are logged in</h1>
-                <button>Logout</button>
-            </div>
-        )
-    }
+export default function Home() {
+    return (
+        <div>
+            
+        </div>
+    )
 }
-export default Home;
