@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react"
-import { Card, Form, Button, Alert } from 'react-bootstrap'
+import { Card, Form, Button, Alert, Image } from 'react-bootstrap'
 import { useAuth } from '../context/AuthContext'
+//import image from "../../public/fulllogo.png"
 
 export default function Signup() {
     const emailRef = useRef();
@@ -31,9 +32,15 @@ export default function Signup() {
 
     return (
         <>
+            <div class="commerce-bank-logo-padding">
+                <Image src="fulllogo.png" class="commerce-bank-logo-padding" fluid />
+            </div>
             <Card>
                 <Card.Body>
-                    <h2 className="text-center mb-4">Sign Up</h2>
+                    {/* <div>
+                        <img src="/fulllogo.png" alt="Commerce Bank" />
+                    </div> */}
+                    <h3 className="text-center mb-4">Sign Up</h3>
                     {error && <Alert variant="danger">{error}</Alert>}
                     <Form onSubmit={handleSubmit}>
                         <Form.Group id="email">
@@ -48,12 +55,12 @@ export default function Signup() {
                             <Form.Label>Password Confirmation</Form.Label>
                             <Form.Control type="password" ref={passwordConfirmRef} required />
                         </Form.Group>
-                        <Button disabled={loading} className="w-100" type="submit">Sign up</Button>
+                        <Button disabled={loading} class="commerce-bank-dark-green-background" className="w-100" type="submit">Sign up</Button>
                     </Form>
                 </Card.Body>
             </Card>
             <div className="w-100 text-center mt-2">
-                Already have an account? Log in
+                Already have an account? <a href="./Login">Log in</a>
             </div>
         </>
     )
