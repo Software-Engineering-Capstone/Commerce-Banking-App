@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react"
 import { Card, Form, Button, Alert, Image } from 'react-bootstrap'
 import { useAuth } from '../context/AuthContext'
-//import image from "../../public/fulllogo.png"
 
 export default function Signup() {
     const emailRef = useRef();
@@ -52,7 +51,7 @@ export default function Signup() {
                             <Form.Control type="password" ref={passwordRef} required />
                         </Form.Group>
                         <Form.Group id="password-confirm">
-                            <Form.Label class="top-padding">Password Confirmation</Form.Label>
+                            <Form.Label class="top-padding">Confirm Password</Form.Label>
                             <Form.Control type="password" ref={passwordConfirmRef} required />
                         </Form.Group>
                         <div class="small-padding w-100">
