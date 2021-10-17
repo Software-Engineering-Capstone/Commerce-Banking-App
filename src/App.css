@@ -1,6 +1,8 @@
 .commerce-bank-dark-green-background {background-color:#006747}
 
-.commerce-bank-logo-padding {padding: 20px}
+.small-padding {padding: 20px}
+
+.top-padding {padding-top: 15px}
 
 .App {
   text-align: center;

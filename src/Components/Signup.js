@@ -32,7 +32,7 @@ export default function Signup() {
 
     return (
         <>
-            <div class="commerce-bank-logo-padding">
+            <div class="small-padding">
                 <Image src="fulllogo.png" class="commerce-bank-logo-padding" fluid />
             </div>
             <Card>
@@ -48,14 +48,14 @@ export default function Signup() {
                             <Form.Control type="email" ref={emailRef} required />
                         </Form.Group>
                         <Form.Group id="password">
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label class="top-padding">Password</Form.Label>
                             <Form.Control type="password" ref={passwordRef} required />
                         </Form.Group>
                         <Form.Group id="password-confirm">
-                            <Form.Label>Password Confirmation</Form.Label>
+                            <Form.Label class="top-padding">Password Confirmation</Form.Label>
                             <Form.Control type="password" ref={passwordConfirmRef} required />
                         </Form.Group>
-                        <div class="commerce-bank-logo-padding w-100">
+                        <div class="small-padding w-100">
                             <Button disabled={loading} className="w-100" type="submit">Sign up</Button>
                         </div> 
                     </Form>
