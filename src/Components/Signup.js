@@ -55,7 +55,9 @@ export default function Signup() {
                             <Form.Label>Password Confirmation</Form.Label>
                             <Form.Control type="password" ref={passwordConfirmRef} required />
                         </Form.Group>
-                        <Button disabled={loading} class="commerce-bank-dark-green-background" className="w-100" type="submit">Sign up</Button>
+                        <div class="commerce-bank-logo-padding w-100">
+                            <Button disabled={loading} className="w-100" type="submit">Sign up</Button>
+                        </div> 
                     </Form>
                 </Card.Body>
             </Card>
