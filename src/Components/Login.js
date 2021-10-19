@@ -1,9 +1,67 @@
-import React from 'react'
+import React, { useRef, useState } from "react"
+import { Card, Form, Image, Button, Alert} from "react-bootstrap"
+import { useAuth } from '../context/AuthContext'
+import { Link, useHistory} from "react-router-dom";
+
 
 export default function Login() {
+    const emailRef = useRef();
+    const passwordRef = useRef();
+    const { login } = useAuth();
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+    const history = useHistory();
+    
+
+    //we use these variables to test if user and password input
+    const dummyEmail = "commercebanktester@gmail.com";
+    const dummyPassword = "X7LTB2u6HW0FUV@~Mg,~";
+
+    async function handleSubmit(e) {
+        e.preventDefault()
+
+        try {
+            setError('') // 
+            setLoading(true) // disables submit button
+            await login(emailRef.current.value, passwordRef.current.value) // calls signup function 
+            history.push("/")
+
+        } catch (e) {
+            setError('Failed to Login' + e)
+        }
+
+        setLoading(false)
+    }
+
     return (
-        <div>
-            <a href="./Signup">Sign up</a>
-        </div>
+        <>
+            <div class="small-padding">
+                <Image src="fulllogo.png" class="commerce-bank-logo-padding" fluid />
+            </div>
+
+            <Card>
+                <Card.Body>
+                    <h3 className="text-center mb-4">Login to Online Banking</h3>
+                    {error && <Alert variant="danger">{error}</Alert>}
+                    <Form onSubmit={handleSubmit}>
+                        <Form.Group id="email">
+                            <Form.Label>Customer ID (or email)</Form.Label>
+                            <Form.Control type="email" ref={emailRef} required />
+                        </Form.Group>
+                        <Form.Group id="password">
+                            <Form.Label class="top-padding">Password</Form.Label>
+                            <Form.Control type="password" ref={passwordRef} required />
+                        </Form.Group>
+                        <div class="small-padding w-100">
+                            <Button disabled={loading} className="w-100" type="submit">Login</Button>
+                        </div>
+                    </Form>
+                </Card.Body>
+            </Card>
+            <div className="w-100 text-center mt-2">
+
+                New to Commerce Bank? <Link to="./Signup">Create account </Link>
+            </div>
+        </>
     )
 }

@@ -22,7 +22,7 @@ function App() {
                         <Switch>
                             <Route path="/login" component={Login} />
                             <Route path="/signup" component={Signup} />
-                            <Route exact path="/" component={Signup} />
+                            <Route exact path="/" component={Dashboard} />
                         </Switch>
                     </AuthProvider>
                 </Router>
