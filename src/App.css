@@ -4,6 +4,10 @@
 
 .top-padding {padding-top: 15px}
 
+h1 {
+  white-space: nowrap;
+}
+
 .App {
   text-align: center;
 }
