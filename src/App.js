@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Login from './components/Login';
-import Signup from './components/Signup';
-import Transactions from './components/Transactions'
+import Login from './Components/Login';
+import Signup from './Components/Signup';
+import Transactions from './Components/Transactions'
 import { Container } from 'react-bootstrap';
 import { AuthProvider } from './context/AuthContext';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
