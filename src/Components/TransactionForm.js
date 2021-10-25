@@ -81,6 +81,12 @@ const TransactionForm = (props) => {
                     <input type="submit" value={props.currentId == '' ? "Save" : "Update"} className="btn btn-primary btn-block" />
                 </div>
             </form >
+
+            {/* 
+            
+                The section below is how we can create the same form as above but with bootstrap
+
+            */}
             <Form autoComplete="off" onSubmit={handleFormSubmit}>
                 <Form.Group id="email">
                     <Form.Label>Full Name</Form.Label>
