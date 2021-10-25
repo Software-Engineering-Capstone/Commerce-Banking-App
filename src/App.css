@@ -4,9 +4,7 @@
 
 .top-padding {padding-top: 15px}
 
-h1 {
-  white-space: nowrap;
-}
+.float-right {float: right}
 
 .App {
   text-align: center;
@@ -22,6 +20,7 @@ h1 {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 
 .App-header {
   background-color: #282c34;

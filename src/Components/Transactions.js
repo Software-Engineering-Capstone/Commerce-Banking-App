@@ -1,24 +1,58 @@
 import React from "react";
 import TransactionForm from "./TransactionForm"
+import { Button, Card, Container, Table } from 'react-bootstrap'
 
 const Transactions = () => {
 
     return(
         <>
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <h1 class="display-4 text-center">Transaction Register</h1>
+            <Container className="d-flex align-items-center justify-content-center"
+                style={{mindHeight: "100vh"}}>
+                <div className="w-100" style={{ maxWidth: '9000px'}}>
+                    <h1>Tranaction Summary
+                        <div className="float-right">
+                            <button>
+                                <img src="settingscog3.png" 
+                                width="40" 
+                                height="40"
+                                />
+                            </button>
+                        </div>
+                    </h1>
+                    <Table striped bordered hover responsive>
+                        <thead >
+                            <tr>
+                                <th>Full Name</th>
+                                <th>Mobile</th>
+                                <th>Email</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Blah</td>
+                                <td>Blah</td>
+                                <td>Blah</td>
+                                <td>
+                                    Blah
+                                </td>
+                            </tr>
+                            {/* {
+                                Object.keys(contactObjects).map(id => {
+                                    return <tr key={id}>
+                                        <td>Blah</td>
+                                        <td>Blah</td>
+                                        <td>Blah</td>
+                                        <td>
+                                            Blah
+                                        </td>
+                                    </tr>
+                                })
+                            } */}
+                        </tbody>
+                    </Table>
                 </div>
-            </div>
-            <div className="row">
-                  <div className="col-md-5">
-                    <TransactionForm />
-
-                </div>
-                <div className="col-md-7">
-                    <div>list of transacions</div>
-                </div>
-            </div>
+            </Container>
         </>
      );
 }
