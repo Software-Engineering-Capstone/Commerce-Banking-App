@@ -4,6 +4,16 @@ import { Button, Card, Container, Table } from 'react-bootstrap'
 
 const Transactions = () => {
 
+    const addOrEdit = obj=>{
+        fireDBRef.child('contacts').push(
+            obj,
+            err => {
+                if (err)
+                    console.log(err)
+                }
+        )
+
+    }
     return(
         <>
             <Container className="d-flex align-items-center justify-content-center"

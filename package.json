@@ -19,7 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "stop": "killall -SIGINT this-name-can-be-as-long-as-it-needs-to-be"
   },
   "eslintConfig": {
     "extends": [
