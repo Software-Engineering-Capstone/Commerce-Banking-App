@@ -36,9 +36,6 @@ export default function Signup() {
             </div>
             <Card>
                 <Card.Body>
-                    {/* <div>
-                        <img src="/fulllogo.png" alt="Commerce Bank" />
-                    </div> */}
                     <h3 className="text-center mb-4">Create a new account</h3>
                     {error && <Alert variant="danger">{error}</Alert>}
                     <Form onSubmit={handleSubmit}>
