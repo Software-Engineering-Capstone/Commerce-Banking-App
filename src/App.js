@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import NavBar from './Components/NavBar';
 import fire from './config/firebase';
-import Login from './Components/Login';
-import Home from './Components/Home';
-import Signup from './Components/Signup';
+import Login from './components/Login';
+import Home from './components/Home';
+import Signup from './components/Signup';
 import { Container } from 'react-bootstrap';
 import { AuthProvider } from './context/AuthContext';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
