@@ -11,11 +11,6 @@ export default function Login() {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     const history = useHistory();
-    
-
-    //we use these variables to test if user and password input
-    const dummyEmail = "commercebanktester@gmail.com";
-    const dummyPassword = "X7LTB2u6HW0FUV@~Mg,~";
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -41,7 +36,7 @@ export default function Login() {
 
             <Card>
                 <Card.Body>
-                    <h3 className="text-center mb-4">Login to Online Banking</h3>
+                    <h3 className="text-center mb-4">Login</h3>
                     {error && <Alert variant="danger">{error}</Alert>}
                     <Form onSubmit={handleSubmit}>
                         <Form.Group id="email">
