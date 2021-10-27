@@ -12,22 +12,15 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
     return (
-        <Container className="d-flex align-items-center 
-        justify-content-center"
-        style={{mindHeight: "100vh"}}>
-            <div className="w-100" style={{ maxWidth: '400px'}}>
-                <Router>
-                    <AuthProvider>
-                        <Switch>
-                            <Route path="/login" component={Login} />
-                            <Route path="/signup" component={Signup} />
-                            <Route exact path="/" component={Transactions} />
-                        </Switch>
-                    </AuthProvider>
-                </Router>
-            </div>
-        </Container>
-
+        <Router>
+            <AuthProvider>
+                <Switch>
+                    <Route path="/login" component={Login} />
+                    <Route path="/signup" component={Signup} />
+                    <Route exact path="/" component={Transactions} />
+                </Switch>
+            </AuthProvider>
+        </Router>
     )
 }
 
