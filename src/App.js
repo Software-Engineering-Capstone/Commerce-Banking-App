@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import fire from './config/firebase';
 import Login from './components/Login';
 import Home from './components/Home';
 import Signup from './components/Signup';
@@ -16,8 +15,8 @@ function App() {
             <AuthProvider>
                 <Switch>
                     <Route path="/login" component={Login} />
-                    <Route path="/signup" component={Signup} />
-                    <Route exact path="/" component={Transactions} />
+                    <Route path="/transactions" component={Transactions} />
+                    <Route exact path="/" component={Signup} />
                 </Switch>
             </AuthProvider>
         </Router>

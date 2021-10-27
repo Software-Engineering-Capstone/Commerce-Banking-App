@@ -19,7 +19,7 @@ export default function Login() {
             setError('') // 
             setLoading(true) // disables submit button
             await login(emailRef.current.value, passwordRef.current.value) // calls signup function 
-            history.push("/")
+            history.push("/transactions")
 
         } catch (e) {
             setError('Failed to Login' + e)
@@ -59,7 +59,7 @@ export default function Login() {
                     </Card>
                     <div className="w-100 text-center mt-2">
 
-                        New to Commerce Bank? <Link to="./Signup">Create account </Link>
+                        New to Commerce Bank? <Link to="./">Create account </Link>
                     </div>
                 </div>
         </Container>
