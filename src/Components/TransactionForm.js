@@ -11,12 +11,12 @@ import { Link, useHistory} from "react-router-dom";
 const TransactionForm = (props) => {
     const initialFieldValues = {
         "Account-Type": '',
-        "Acct-Id": '',
+        "Acct-id": '',
         Amount: '',
         Balance: '',
         Location: '',
         "Processing-Date": '',
-        "Transaction-Type": ''
+        "Transaction-type": ''
     }
 
     const accountType = useRef();
@@ -76,7 +76,7 @@ const TransactionForm = (props) => {
                                 </Form.Group>
                                 <Form.Group as={Col} id="acctId">
                                     <FloatingLabel controlId="floatingInputGrid" label="Account ID">
-                                        <Form.Control onChange={handleInputChange} name="Acct-Id" value={values["Acct-Id"]} type="text" 
+                                        <Form.Control onChange={handleInputChange} name="Acct-id" value={values["Acct-id"]} type="text" 
                                         placeholder="Account ID" ref={acctId} required />
                                     </FloatingLabel>
                                 </Form.Group>
@@ -112,7 +112,7 @@ const TransactionForm = (props) => {
                                 </Form.Group>
                                 <Form.Group as={Col} id="transactionType" className="top-padding">
                                     <FloatingLabel controlId="floatingInputGrid" label="Transaction Type">
-                                        <Form.Control onChange={handleInputChange} name="Transaction-Type" value={values["Transaction-Type"]} type="text" 
+                                        <Form.Control onChange={handleInputChange} name="Transaction-type" value={values["Transaction-type"]} type="text" 
                                         placeholder="Transaction Type" ref={transactionType} required />
                                     </FloatingLabel>
                                 </Form.Group>
