@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import TransactionForm from "./TransactionForm"
 import { Button, Card, Container, Table } from 'react-bootstrap'
+import { fireDb } from "../firebase";
 
 const Transactions = () => {
+
+    var [transactionObjects,setTransactionObjects] = useState(0)
+
+    useEffect(()=>{
+        fireDb.on('value', snapshot=>{
+            if(snapshot.val()!=null)
+            setTransactionObjects({
+                ...snapshot.val()
+            })
+        })
+    },[])
+
     return(
         <>
             <Container className="d-flex align-items-center justify-content-center"
@@ -21,33 +34,29 @@ const Transactions = () => {
                     <Table striped bordered hover responsive>
                         <thead >
                             <tr>
-                                <th>Full Name</th>
-                                <th>Mobile</th>
-                                <th>Email</th>
-                                <th>Actions</th>
+                                <th>Account Type</th>
+                                <th>Account Id</th>
+                                <th>Amount</th>
+                                <th>Balance</th>
+                                <th>Location</th>
+                                <th>Processing Date</th>
+                                <th>Transaction Type</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Blah</td>
-                                <td>Blah</td>
-                                <td>Blah</td>
-                                <td>
-                                    Blah
-                                </td>
-                            </tr>
-                            {/* {
-                                Object.keys(contactObjects).map(id => {
-                                    return <tr key={id}>
-                                        <td>Blah</td>
-                                        <td>Blah</td>
-                                        <td>Blah</td>
-                                        <td>
-                                            Blah
-                                        </td>
-                                    </tr>
-                                })
-                            } */}
+                            {
+                            Object.keys(transactionObjects).map(id => {
+                                return <tr key={id}>
+                                    <td>{transactionObjects[id]["Account-Type"]}</td>
+                                    <td>{transactionObjects[id]["Acct-id"]}</td>
+                                    <td>{transactionObjects[id].Amount}</td>
+                                    <td>{transactionObjects[id].Balance}</td>
+                                    <td>{transactionObjects[id].Location}</td>
+                                    <td>{transactionObjects[id]["Processing-Date"]}</td>
+                                    <td>{transactionObjects[id]["Transaction-type"]}</td>
+                                </tr>
+                            })
+                            }
                         </tbody>
                     </Table>
                 </div>
