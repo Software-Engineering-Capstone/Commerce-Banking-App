@@ -3,16 +3,18 @@ import { Text, View, StyleSheet, Animated, TouchableWithoutFeedback } from 'reac
 import AddIcon from "@mui/icons-material/Add"
 import Fab from '@mui/material/Fab'
 import {Button} from "react-bootstrap"
+import { Link, useHistory} from "react-router-dom";
 
 export default class FloatingButton extends Component {
+
     render() {
         return (
             <View style={[styles.container]}>
                 <TouchableWithoutFeedback>
                     <Animated.View style={[styles.button, styles.menu]}>
                         {/* sx is the bootstrap equivalent to react-native style*/}
-                        <Fab>
-                            <AddIcon sx={[styles.icon]}  />
+                        <Fab >
+                            <AddIcon sx={[styles.icon]} />
                         </Fab>
                     </Animated.View>
                 </TouchableWithoutFeedback>
@@ -21,19 +23,26 @@ export default class FloatingButton extends Component {
     }
 }
 
+
+
+// function handleClick() {
+//     history.push("/transactionForm")
+// }
+
 const styles = StyleSheet.create({
     container: {
+        position: "fixed",
         flex: 1,
-        justifyContent: "right",
-        alignItems: "right"
+        right: "100px",
+        bottom: "100px"
     },
     button: {
         position: "absolute",
         width: 60,
         height: 60,
         borderRadius: 60 / 2,
-        alightItems: "center",
-        justifyContent: "center",
+        alightItems: "right",
+        justifyContent: "right",
     },
     menu: {
 
