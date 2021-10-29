@@ -30,6 +30,11 @@ export default function Login() {
 
     return (
         <>
+        {
+            // The container below and div tag directly following it are used through out the 
+            // project for their classes that keep the child elements aligned in the center 
+            // and flex with the page
+        }
             <Container className="d-flex align-items-center 
                 justify-content-center"
                 style={{mindHeight: "100vh"}}>

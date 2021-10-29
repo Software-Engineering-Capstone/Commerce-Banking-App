@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import TransactionForm from "./TransactionForm"
+import React, { useState, useEffect } from "react"
 import { Button, Card, Container, Table } from 'react-bootstrap'
 import { fireDb } from "../firebase";
+
 
 const Transactions = () => {
 
@@ -18,17 +18,19 @@ const Transactions = () => {
 
     return(
         <>
+        {
+            // The container below and div tag directly following it are used through out the 
+            // project for their classes that keep the child elements aligned in the center 
+            // and flex with the page
+        }
             <Container className="d-flex align-items-center justify-content-center"
                 style={{mindHeight: "100vh"}}>
                 <div className="w-100" style={{ maxWidth: '9000px'}}>
                     <h1>Transaction Summary
                         <div className="float-right">
-                            <button>
-                                <img src="settingscog3.png" 
-                                width="40" 
-                                height="40"
-                                />
-                            </button>
+                            <Button>
+                                <img src="settingscog3.png" className="top-corner-button" width="40" height="40" />
+                            </Button>
                         </div>
                     </h1>
                     <Table striped bordered hover responsive>

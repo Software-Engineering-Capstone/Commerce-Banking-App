@@ -5,12 +5,13 @@ import { Link, useHistory} from "react-router-dom";
 
 //
 // Look here for help with forms styling https://react-bootstrap.netlify.app/components/forms/
-//
+// Look here for youtube guide that I based our page on https://www.youtube.com/watch?v=pI4438IHBYY
 //
 
 const TransactionForm = (props) => {
     const initialFieldValues = {
-        "Account-Type": '',
+        // These must match exactly with the attributes of the transaction table
+        "Account-Type": '',  // An attribute with hyphens in the string must be encased in quotes
         "Acct-id": '',
         Amount: '',
         Balance: '',
@@ -31,6 +32,9 @@ const TransactionForm = (props) => {
     var [values, setValues] = useState(initialFieldValues)
     var [currentId, setCurrentId] = useState('')
 
+    // the name and value are properties of the elements on the page
+    // they are used to populate the object that will be sent to the database via form submission
+    // this function loads the payload to be sent to the database while the user is typing
     const handleInputChange = e => {
         var { name, value } = e.target
         setValues({
@@ -39,7 +43,7 @@ const TransactionForm = (props) => {
         })
     }
 
-    const addOrEdit = obj => {
+    const add = obj => {
         fireDb.push(
             obj,
             err => {
@@ -53,19 +57,26 @@ const TransactionForm = (props) => {
 
     const handleFormSubmit = e => {
         e.preventDefault();
-        addOrEdit(values)
+        add(values)
         history.push("/transactions")
     }
 
     return (
         <>
+        {
+            // The container below and div tag directly following it are used through out the 
+            // project for their classes that keep the child elements aligned in the center 
+            // and flex with the page
+        }
             <Container className="d-flex align-items-center 
                 justify-content-center"
                 style={{mindHeight: "100vh"}}>
+                {
+                    // The maxWidth property controls the overall width of the page elements
+                }
                 <div className="w-100" style={{ maxWidth: '600px'}}>
                     <div className="small-padding w-100">
                         <h2>Transaction Form</h2>
-
                         <Form autoComplete="off" onSubmit={handleFormSubmit}>
                             <Row>
                                 <Form.Group as={Col} id="accountType">
