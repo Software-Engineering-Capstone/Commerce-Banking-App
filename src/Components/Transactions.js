@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react"
 import { Button, Card, Container, Table } from 'react-bootstrap'
-import { fireDb } from "../firebase";
-
+import { fireDb } from "../firebase"
+import Fab from '@mui/material/Fab';
+import AddIcon from "@mui/icons-material/Add"
+import EditIcon from '@mui/icons-material/Edit'
+import FavoriteIcon from '@mui/icons-material/Favorite'
+import NavigationIcon from '@mui/icons-material/Navigation'
+// import { FloatingButton, Item } from "react-floating-button";
+import FloatingButton from "./FloatingButton"
 
 const Transactions = () => {
 
@@ -18,6 +24,10 @@ const Transactions = () => {
 
     return(
         <>
+                {/* <Fab color="primary" >
+                    <AddIcon />
+        </Fab> */}
+
         {
             // The container below and div tag directly following it are used through out the 
             // project for their classes that keep the child elements aligned in the center 
@@ -25,6 +35,7 @@ const Transactions = () => {
         }
             <Container className="d-flex align-items-center justify-content-center"
                 style={{mindHeight: "100vh"}}>
+                            <FloatingButton style={{ bottom: 100}}/>
                 <div className="w-100" style={{ maxWidth: '9000px'}}>
                     <h1>Transaction Summary
                         <div className="float-right">
@@ -61,8 +72,11 @@ const Transactions = () => {
                             }
                         </tbody>
                     </Table>
+
                 </div>
+
             </Container>
+
         </>
      );
 }
