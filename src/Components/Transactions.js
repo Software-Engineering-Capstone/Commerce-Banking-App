@@ -21,7 +21,7 @@ const Transactions = () => {
             <Container className="d-flex align-items-center justify-content-center"
                 style={{mindHeight: "100vh"}}>
                 <div className="w-100" style={{ maxWidth: '9000px'}}>
-                    <h1>Tranaction Summary
+                    <h1>Transaction Summary
                         <div className="float-right">
                             <button>
                                 <img src="settingscog3.png" 

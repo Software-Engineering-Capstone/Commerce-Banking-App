@@ -16,9 +16,9 @@ function App() {
             <AuthProvider>
                 <Switch>
                     <Route path="/login" component={Login} />
-                    <Route path="/transactions" component={Transactions} />
                     <Route path="/transactionform" component={TransactionForm} />
-                    <Route exact path="/" component={Signup} />
+                    <Route path="/Ssgnup" component={Signup} />
+                    <Route exact path="/" component={Transactions} />
                 </Switch>
             </AuthProvider>
         </Router>
