@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { View, StyleSheet } from 'react-native'
 import {Button} from "react-bootstrap"
-import { Link, useHistory} from "react-router-dom";
+import { useHistory} from "react-router-dom";
 import { useAuth } from '../context/AuthContext'
 
 export default function SettingsButton() {

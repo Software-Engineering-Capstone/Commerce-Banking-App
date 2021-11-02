@@ -18,7 +18,7 @@ export default function Login() {
         try {
             setError('') // 
             setLoading(true) // disables submit button
-            await login(emailRef.current.value, passwordRef.current.value) // calls signup function 
+            await login(emailRef.current.value, passwordRef.current.value) // calls login function 
             history.push("/")
 
         } catch (e) {

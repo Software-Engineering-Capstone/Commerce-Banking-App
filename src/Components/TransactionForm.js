@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
-import { Card, Form, Button, Alert, Image, FloatingLabel, Col, Row, Container } from 'react-bootstrap'
+import { Form, Button, FloatingLabel, Col, Row, Container } from 'react-bootstrap'
 import { fireDb } from "../firebase";
-import { Link, useHistory} from "react-router-dom";
+import { useHistory} from "react-router-dom";
 import SettingsButton from "./SettingsButton"
 
 //

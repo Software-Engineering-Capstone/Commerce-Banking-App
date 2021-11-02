@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { Button, Card, Container, Table } from 'react-bootstrap'
-import { Link, useHistory} from "react-router-dom";
+import { Container, Table } from 'react-bootstrap'
 import { fireDb } from "../firebase"
-import Fab from '@mui/material/Fab';
-import AddIcon from "@mui/icons-material/Add"
-import EditIcon from '@mui/icons-material/Edit'
-import FavoriteIcon from '@mui/icons-material/Favorite'
-import NavigationIcon from '@mui/icons-material/Navigation'
-// import { FloatingButton, Item } from "react-floating-button";
 import FloatingButton from "./FloatingButton"
 import SettingsButton from "./SettingsButton"
 
@@ -40,12 +33,10 @@ const Transactions = () => {
                 <div className="w-100" style={{ maxWidth: '9000px'}}>
                     <div>
                         <div class="page-header">
-
-                            <h1 class="pull-left">
+                            <h1>
                                 Transaction Summary
-                                <SettingsButton />
                             </h1>
-
+                            <SettingsButton />
                         </div>
                     </div>
                     <Table striped bordered hover responsive>
