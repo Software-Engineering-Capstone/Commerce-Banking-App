@@ -13,7 +13,7 @@ export default class FloatingButton extends Component {
                 <TouchableWithoutFeedback>
                     <Animated.View style={[styles.button, styles.menu]}>
                         {/* sx is the bootstrap equivalent to react-native style*/}
-                        <Fab >
+                        <Fab href="./TransactionForm">
                             <AddIcon sx={[styles.icon]} />
                         </Fab>
                     </Animated.View>

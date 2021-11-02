@@ -9,8 +9,11 @@ import FavoriteIcon from '@mui/icons-material/Favorite'
 import NavigationIcon from '@mui/icons-material/Navigation'
 // import { FloatingButton, Item } from "react-floating-button";
 import FloatingButton from "./FloatingButton"
+import SettingsButton from "./SettingsButton"
 
-
+//
+// Look here for youtube guide that I based our page on https://www.youtube.com/watch?v=pI4438IHBYY
+//
 const Transactions = () => {
 
     var [transactionObjects,setTransactionObjects] = useState(0)
@@ -35,13 +38,16 @@ const Transactions = () => {
                 style={{mindHeight: "100vh"}}>
                     
                 <div className="w-100" style={{ maxWidth: '9000px'}}>
-                    <h1>Transaction Summary
-                        <div className="float-right">
-                            <Button>
-                                <img src="settingscog3.png" className="top-corner-button" width="40" height="40" />
-                            </Button>
+                    <div>
+                        <div class="page-header">
+
+                            <h1 class="pull-left">
+                                Transaction Summary
+                                <SettingsButton />
+                            </h1>
+
                         </div>
-                    </h1>
+                    </div>
                     <Table striped bordered hover responsive>
                         <thead >
                             <tr>
@@ -69,9 +75,7 @@ const Transactions = () => {
                             })
                             }
                         </tbody>
-                        
                     </Table>
-                    
                 </div>
                 <FloatingButton />
             </Container>
