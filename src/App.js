@@ -2,7 +2,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './components/Login';
 import Signup from './components/Signup';
-import Login from './components/Login';
 import Transactions from './components/Transactions'
 import TransactionForm from './components/TransactionForm'
 import { AuthProvider } from './context/AuthContext';
