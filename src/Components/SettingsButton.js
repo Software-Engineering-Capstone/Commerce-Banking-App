@@ -1,27 +1,44 @@
-import React, { Component } from 'react'
-import { Text, View, StyleSheet, Animated, TouchableWithoutFeedback } from 'react-native'
-import AddIcon from "@mui/icons-material/Add"
-import Fab from '@mui/material/Fab'
+import React, { useState } from 'react'
+import { View, StyleSheet } from 'react-native'
 import {Button} from "react-bootstrap"
 import { Link, useHistory} from "react-router-dom";
+import { useAuth } from '../context/AuthContext'
 
-export default class SettingsButton extends Component {
+export default function SettingsButton() {
+        const [error, setError] = useState('');
+        const [loading, setLoading] = useState(false);
+        const { currentUser, logout } = useAuth();
+        const history = useHistory();
 
-    render() {
+        async function handleLogout() {
+            setError('') 
+
+            try {
+                // 
+                setLoading(true)
+                await logout()
+                history.push("/Signup")
+    
+            } catch (e) {
+                setError('Failed to Logout' + e)
+            }
+    
+            setLoading(false)
+        }
+
         return (
             <View style={[styles.container]}>
-                <Button href="./Signup">
+                <Button onClick={handleLogout}>
                     <img src="settingscog3.png"  width="35" height="35" />
                 </Button>
             </View>
         )
-    }
 }
 
 const styles = StyleSheet.create({
     container: {
         position: "absolute",
-        right: "100px",
-        top: "1px"
+        right: "80px",
+        top: "0px"
     }
 });

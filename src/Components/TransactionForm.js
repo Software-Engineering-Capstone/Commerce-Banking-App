@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { Card, Form, Button, Alert, Image, FloatingLabel, Col, Row, Container } from 'react-bootstrap'
 import { fireDb } from "../firebase";
 import { Link, useHistory} from "react-router-dom";
+import SettingsButton from "./SettingsButton"
 
 //
 // Look here for help with forms styling https://react-bootstrap.netlify.app/components/forms/
@@ -77,6 +78,7 @@ const TransactionForm = (props) => {
                 <div className="w-100" style={{ maxWidth: '600px'}}>
                     <div className="small-padding w-100">
                         <h2>Transaction Form</h2>
+                        <SettingsButton />
                         <Form autoComplete="off" onSubmit={handleFormSubmit}>
                             <Row>
                                 <Form.Group as={Col} id="accountType">

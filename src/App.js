@@ -9,7 +9,7 @@ import TransactionForm from './components/TransactionForm'
 import { Container } from 'react-bootstrap';
 import { AuthProvider } from './context/AuthContext';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
+import PrivateRoute from "./components/PrivateRoute"
 function App() {
     return (
         <Router>
@@ -18,7 +18,7 @@ function App() {
                     <Route path="/login" component={Login} />
                     <Route path="/transactionform" component={TransactionForm} />
                     <Route path="/Signup" component={Signup} />
-                    <Route exact path="/" component={Transactions} />
+                    <PrivateRoute exact path="/" component={Transactions} />
                 </Switch>
             </AuthProvider>
         </Router>

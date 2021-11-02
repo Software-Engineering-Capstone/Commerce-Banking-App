@@ -19,7 +19,7 @@ export default function Login() {
             setError('') // 
             setLoading(true) // disables submit button
             await login(emailRef.current.value, passwordRef.current.value) // calls signup function 
-            history.push("/transactions")
+            history.push("/")
 
         } catch (e) {
             setError('Failed to Login' + e)
