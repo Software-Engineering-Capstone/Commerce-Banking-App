@@ -17,7 +17,7 @@ export default function SettingsButton() {
                 // 
                 setLoading(true)
                 await logout()
-                history.push("/Signup")
+                history.push("/Login")
     
             } catch (e) {
                 setError('Failed to Logout' + e)

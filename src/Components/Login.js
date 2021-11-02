@@ -64,7 +64,7 @@ export default function Login() {
                     </Card>
                     <div className="w-100 text-center mt-2">
 
-                        New to Commerce Bank? <Link to="./">Create account </Link>
+                        New to Commerce Bank? <Link to="./Signup">Create account </Link>
                     </div>
                 </div>
         </Container>

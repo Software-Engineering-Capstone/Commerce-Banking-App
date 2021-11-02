@@ -5,9 +5,8 @@ import Fab from '@mui/material/Fab'
 import {Button} from "react-bootstrap"
 import { Link, useHistory} from "react-router-dom";
 
-export default class FloatingButton extends Component {
+export default function FloatingButton() {
 
-    render() {
         return (
             <View style={[styles.container]}>
                 <TouchableWithoutFeedback>
@@ -20,7 +19,6 @@ export default class FloatingButton extends Component {
                 </TouchableWithoutFeedback>
             </View>
         )
-    }
 }
 
 
