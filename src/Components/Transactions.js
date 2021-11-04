@@ -32,7 +32,7 @@ const Transactions = () => {
                     
                 <div className="w-100" style={{ maxWidth: '1000px'}}>
                     <div>
-                        <div class="page-header">
+                        <div class="page-header bottom-padding">
                             <h1>
                                 Transaction Summary
                             </h1>
