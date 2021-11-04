@@ -28,7 +28,7 @@ export default function SettingsButton() {
 
         return (
             <View style={[styles.container]}>
-                <Button onClick={handleLogout}>
+                <Button variant="secondary" size="sm" onClick={handleLogout}>
                     <img src="settingscog3.png" alt="settings" width="35" height="35" />
                 </Button>
             </View>
@@ -38,7 +38,7 @@ export default function SettingsButton() {
 const styles = StyleSheet.create({
     container: {
         position: "absolute",
-        right: "0px",
-        top: "0px"
+        right: "1px",
+        top: "1px"
     }
 });

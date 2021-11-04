@@ -71,7 +71,7 @@ const TransactionForm = (props) => {
         }
             <Container className="d-flex align-items-center 
                 justify-content-center"
-                style={{mindHeight: "100vh"}}>
+                >
                 {
                     // The maxWidth property controls the overall width of the page elements
                 }
