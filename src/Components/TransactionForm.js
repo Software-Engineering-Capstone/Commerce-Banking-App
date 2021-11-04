@@ -31,7 +31,7 @@ const TransactionForm = (props) => {
     const history = useHistory();
 
     var [values, setValues] = useState(initialFieldValues)
-    var [currentId, setCurrentId] = useState('')
+    var [, setCurrentId] = useState('')
 
     // the name and value are properties of the elements on the page
     // they are used to populate the object that will be sent to the database via form submission
