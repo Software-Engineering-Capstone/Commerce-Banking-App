@@ -38,7 +38,7 @@ export default function SettingsButton() {
 const styles = StyleSheet.create({
     container: {
         position: "absolute",
-        right: "80px",
+        right: "0px",
         top: "0px"
     }
 });

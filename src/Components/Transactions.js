@@ -30,7 +30,7 @@ const Transactions = () => {
             <Container className="d-flex align-items-center justify-content-center"
                 style={{mindHeight: "100vh"}}>
                     
-                <div className="w-100" style={{ maxWidth: '9000px'}}>
+                <div className="w-100" style={{ maxWidth: '1000px'}}>
                     <div>
                         <div class="page-header">
                             <h1>
@@ -67,8 +67,9 @@ const Transactions = () => {
                             }
                         </tbody>
                     </Table>
+                    <FloatingButton />
                 </div>
-                <FloatingButton />
+                
             </Container>
         </>
      );
