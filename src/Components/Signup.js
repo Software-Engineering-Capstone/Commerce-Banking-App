@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react"
 import { Card, Form, Button, Alert, Image, Container } from 'react-bootstrap'
 import { useAuth } from '../context/AuthContext'
+import { Link, useHistory} from "react-router-dom";
 
 export default function Signup() {
     const emailRef = useRef();
@@ -9,6 +10,7 @@ export default function Signup() {
     const { signup } = useAuth();
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
+    const history = useHistory();
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -20,8 +22,9 @@ export default function Signup() {
 
             try {
                 setError('')
-                setLoading(true)
+                setLoading(true) // disables submit button
                 await signup(emailRef.current.value, passwordRef.current.value)
+                history.push("/")
             } catch (e) {
                 setError('Failed to create an account' + e)
             }
@@ -31,9 +34,14 @@ export default function Signup() {
 
     return (
         <>
+        {
+            // The container below and div tag directly following it are used through out the 
+            // project for their classes that keep the child elements aligned in the center 
+            // and flex with the page
+        }
             <Container className="d-flex align-items-center 
-                justify-content-center"
-                style={{mindHeight: "100vh"}}>
+            justify-content-center"
+            style={{mindHeight: "100vh"}}>
                 <div className="w-100" style={{ maxWidth: '400px'}}>
                     <div class="small-padding">
                         <Image src="fulllogo.png" class="commerce-bank-logo-padding" fluid />
@@ -62,7 +70,7 @@ export default function Signup() {
                         </Card.Body>
                     </Card>
                     <div className="w-100 text-center mt-2">
-                        Already have an account? <a href="./Login">Log in</a>
+                        Already have an account? <Link to="./Login">Log in</Link>
                     </div>
                 </div>
             </Container>

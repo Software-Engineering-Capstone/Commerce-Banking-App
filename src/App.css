@@ -4,6 +4,20 @@
 
 .top-padding {padding-top: 15px}
 
+.bottom-padding {padding-bottom: 15px}
+
+.bottom-padding-t-form {padding-bottom: 20px}
+
+.settings-button {
+  display: inline;
+  float: right;
+  height: 5vmin;
+}
+
+.inline-header {
+  display: inline;
+}
+
 .App {
   text-align: center;
 }

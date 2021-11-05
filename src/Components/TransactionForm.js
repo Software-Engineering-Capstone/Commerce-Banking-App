@@ -1,26 +1,41 @@
 import React, { useRef, useState } from "react"
-import { Card, Form, Button, Alert, Image } from 'react-bootstrap'
+import { Form, Button, FloatingLabel, Col, Row, Container } from 'react-bootstrap'
+import { fireDb } from "../config/firebase";
+import { useHistory} from "react-router-dom";
+import SettingsButton from "./SettingsButton"
 
 //
 // Look here for help with forms styling https://react-bootstrap.netlify.app/components/forms/
-//
+// Look here for youtube guide that I based our page on https://www.youtube.com/watch?v=pI4438IHBYY
 //
 
 const TransactionForm = (props) => {
     const initialFieldValues = {
-        fullName: '',
-        mobile: '',
-        email: '',
-        address: ''
+        // These must match exactly with the attributes of the transaction table
+        "Account-Type": '',  // An attribute with hyphens in the string must be encased in quotes
+        "Acct-id": '',
+        Amount: '',
+        Balance: '',
+        Location: '',
+        "Processing-Date": '',
+        "Transaction-type": ''
     }
 
-    const emailRef = useRef();
-    const passwordRef = useRef(); 
-    const passwordConfirmRef = useRef();
+    const accountType = useRef();
+    const acctId = useRef(); 
+    const amount = useRef();
+    const balance = useRef();
+    const location = useRef();
+    const processingDate = useRef();
+    const transactionType = useRef();
+    const history = useHistory();
 
     var [values, setValues] = useState(initialFieldValues)
+    var [, setCurrentId] = useState('')
 
-
+    // the name and value are properties of the elements on the page
+    // they are used to populate the object that will be sent to the database via form submission
+    // this function loads the payload to be sent to the database while the user is typing
     const handleInputChange = e => {
         var { name, value } = e.target
         setValues({
@@ -28,82 +43,104 @@ const TransactionForm = (props) => {
             [name]: value
         })
     }
+
+    const add = obj => {
+        fireDb.push(
+            obj,
+            err => {
+                if (err)
+                    console.log(err)
+                else
+                    setCurrentId('')
+            }
+        )
+    }
+
     const handleFormSubmit = e => {
         e.preventDefault();
-        props.addOrEdit(values)
+        add(values)
+        history.push("/")
     }
 
     return (
         <>
-            <form autoComplete="off" onSubmit={handleFormSubmit}>
-                <div className="form-group input-group">
-                    <div className="input-group-prepend">
-                        <div className="input-group-text">
-                            <i className="fas fa-user"></i>
+        {
+            // The container below and div tag directly following it are used through out the 
+            // project for their classes that keep the child elements aligned in the center 
+            // and flex with the page
+        }
+            <Container className="d-flex align-items-center 
+                justify-content-center"
+                >
+                {
+                    // The maxWidth property controls the overall width of the page elements
+                }
+                <div className="w-100" style={{ maxWidth: '600px'}}>
+                    <div className="small-padding w-100">
+                        <div className="page-header bottom-padding-t-form">
+                            <h2 className="inline-header">
+                                Transaction Form 
+                                <SettingsButton />
+                            </h2>
                         </div>
+                        <Form autoComplete="off" onSubmit={handleFormSubmit}>
+                            <Row>
+                                <Form.Group as={Col} id="accountType">
+                                    <FloatingLabel controlId="floatingInputGrid" label="Account Type">
+                                        <Form.Control onChange={handleInputChange} name="Account-Type" value={values["Account-Type"]} type="text" 
+                                        placeholder="Account Type" ref={accountType} required />
+                                    </FloatingLabel>
+                                </Form.Group>
+                                <Form.Group as={Col} id="acctId">
+                                    <FloatingLabel controlId="floatingInputGrid" label="Account ID">
+                                        <Form.Control onChange={handleInputChange} name="Acct-id" value={values["Acct-id"]} type="text" 
+                                        placeholder="Account ID" ref={acctId} required />
+                                    </FloatingLabel>
+                                </Form.Group>
+                            </Row>
+                            <Row>
+                                <Form.Group as={Col} id="amount" className="top-padding">
+                                    <FloatingLabel controlId="floatingInputGrid" label="Amount">
+                                        <Form.Control onChange={handleInputChange} name="Amount" value={values.Amount} type="text" 
+                                        placeholder="Amount" ref={amount} required />
+                                    </FloatingLabel>
+                                </Form.Group>
+                                <Form.Group as={Col} id="balance" className="top-padding">
+                                    <FloatingLabel controlId="floatingInputGrid" label="Balance">
+                                        <Form.Control onChange={handleInputChange} name="Balance" value={values.Balance} type="text" 
+                                        placeholder="Amount" ref={balance} required />
+                                    </FloatingLabel>
+                                </Form.Group>
+                            </Row>
+                            <Row>
+                                <Form.Group as={Col} id="location" className="top-padding">
+                                    <FloatingLabel controlId="floatingInputGrid" label="Location">
+                                        <Form.Control onChange={handleInputChange} name="Location" value={values.Location} type="text" 
+                                        placeholder="Amount" ref={location} required />
+                                    </FloatingLabel>
+                                </Form.Group>
+                            </Row>
+                            <Row>
+                                <Form.Group as={Col} id="processingDate" className="top-padding">
+                                    <FloatingLabel controlId="floatingInputGrid" label="Processing Date">
+                                        <Form.Control onChange={handleInputChange} name="Processing-Date" value={values["Processing-Date"]} type="text" 
+                                        placeholder="Processing Date" ref={processingDate} required />
+                                    </FloatingLabel>
+                                </Form.Group>
+                                <Form.Group as={Col} id="transactionType" className="top-padding">
+                                    <FloatingLabel controlId="floatingInputGrid" label="Transaction Type">
+                                        <Form.Control onChange={handleInputChange} name="Transaction-type" value={values["Transaction-type"]} type="text" 
+                                        placeholder="Transaction Type" ref={transactionType} required />
+                                    </FloatingLabel>
+                                </Form.Group>
+                            </Row>
+                            <div className="top-padding w-100">
+                                <Button type="submit">Submit</Button>
+                            </div> 
+                        </Form>
                     </div>
-                    <input className="form-control" placeholder="Full Name" name="fullName"
-                        value={values.fullName}
-                        onChange={handleInputChange}
-                    />
                 </div>
-                <div className="form-row">
-                    <div className="form-group input-group col-md-6">
-                        <div className="input-group-prepend">
-                            <div className="input-group-text">
-                                <i className="fas fa-mobile-alt"></i>
-                            </div>
-                        </div>
-                        <input className="form-control" placeholder="Mobile" name="mobile"
-                            value={values.mobile}
-                            onChange={handleInputChange}
-                        />
-                    </div>
-                    <div className="form-group input-group col-md-6">
-                        <div className="input-group-prepend">
-                            <div className="input-group-text">
-                                <i className="fas fa-envelope"></i>
-                            </div>
-                        </div>
-                        <input className="form-control" placeholder="Email" name="email"
-                            value={values.email}
-                            onChange={handleInputChange}
-                        />
-                    </div>
-                </div>
-                <div className="form-group">
-                    <textarea className="form-control" placeholder="Address" name="address"
-                        value={values.address}
-                        onChange={handleInputChange}
-                    />
-                </div>
-                <div className="form-group">
-                    <input type="submit" value={props.currentId == '' ? "Save" : "Update"} className="btn btn-primary btn-block" />
-                </div>
-            </form >
-
-            {/* 
-            
-                The section below is how we can create the same form as above but with bootstrap
-
-            */}
-            <Form autoComplete="off" onSubmit={handleFormSubmit}>
-                <Form.Group id="email">
-                    <Form.Label>Full Name</Form.Label>
-                    <Form.Control type="email" ref={emailRef} required />
-                </Form.Group>
-                <Form.Group id="password">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" ref={passwordRef} required />
-                </Form.Group>
-                <Form.Group id="password-confirm">
-                    <Form.Label>Confirm Password</Form.Label>
-                    <Form.Control type="password" ref={passwordConfirmRef} required />
-                </Form.Group>
-                <div class="small-padding w-100">
-                    <Button className="w-100" type="submit">Create Account</Button>
-                </div> 
-            </Form>
+            </Container>
         </>
     );
 }

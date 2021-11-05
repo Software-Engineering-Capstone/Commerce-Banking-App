@@ -18,7 +18,7 @@ export default function Login() {
         try {
             setError('') // 
             setLoading(true) // disables submit button
-            await login(emailRef.current.value, passwordRef.current.value) // calls signup function 
+            await login(emailRef.current.value, passwordRef.current.value) // calls login function 
             history.push("/")
 
         } catch (e) {
@@ -30,9 +30,14 @@ export default function Login() {
 
     return (
         <>
+        {
+            // The container below and div tag directly following it are used through out the 
+            // project for their classes that keep the child elements aligned in the center 
+            // and flex with the page
+        }
             <Container className="d-flex align-items-center 
-            justify-content-center"
-            style={{mindHeight: "100vh"}}>
+                justify-content-center"
+                style={{mindHeight: "100vh"}}>
                 <div className="w-100" style={{ maxWidth: '400px'}}>
                     <div class="small-padding">
                         <Image src="fulllogo.png" class="commerce-bank-logo-padding" fluid />
