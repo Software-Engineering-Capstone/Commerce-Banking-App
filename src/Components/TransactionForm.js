@@ -31,7 +31,11 @@ const TransactionForm = (props) => {
     const history = useHistory();
 
     var [values, setValues] = useState(initialFieldValues)
+<<<<<<< HEAD
     var [currentId, setCurrentId] = useState('')
+=======
+    var [, setCurrentId] = useState('')
+>>>>>>> npm-fix-2
 
     // the name and value are properties of the elements on the page
     // they are used to populate the object that will be sent to the database via form submission
@@ -59,7 +63,7 @@ const TransactionForm = (props) => {
     const handleFormSubmit = e => {
         e.preventDefault();
         add(values)
-        history.push("/transactions")
+        history.push("/")
     }
 
     return (
@@ -71,14 +75,18 @@ const TransactionForm = (props) => {
         }
             <Container className="d-flex align-items-center 
                 justify-content-center"
-                style={{mindHeight: "100vh"}}>
+                >
                 {
                     // The maxWidth property controls the overall width of the page elements
                 }
                 <div className="w-100" style={{ maxWidth: '600px'}}>
                     <div className="small-padding w-100">
-                        <h2>Transaction Form</h2>
-                        <SettingsButton />
+                        <div className="page-header bottom-padding-t-form">
+                            <h2 className="inline-header">
+                                Transaction Form 
+                                <SettingsButton />
+                            </h2>
+                        </div>
                         <Form autoComplete="off" onSubmit={handleFormSubmit}>
                             <Row>
                                 <Form.Group as={Col} id="accountType">

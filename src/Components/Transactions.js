@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Container, Table } from 'react-bootstrap'
+import { Dimensions } from "react-native"
 import { fireDb } from "../firebase"
 import FloatingButton from "./FloatingButton"
 import SettingsButton from "./SettingsButton"
@@ -10,6 +11,14 @@ import SettingsButton from "./SettingsButton"
 const Transactions = () => {
 
     var [transactionObjects,setTransactionObjects] = useState(0)
+    var width = Dimensions.get('window').width;
+    var headerPadding;
+
+    if (width < 751) {
+        headerPadding="page-header bottom-padding top-padding"
+    } else {
+        headerPadding="page-header bottom-padding"
+    }
 
     useEffect(()=>{
         fireDb.on('value', snapshot=>{
@@ -30,13 +39,13 @@ const Transactions = () => {
             <Container className="d-flex align-items-center justify-content-center"
                 style={{mindHeight: "100vh"}}>
                     
-                <div className="w-100" style={{ maxWidth: '9000px'}}>
+                <div className="w-100" style={{ maxWidth: '1000px'}}>
                     <div>
-                        <div class="page-header">
-                            <h1>
+                        <div class={headerPadding}>
+                            <h1 className="inline-header">
                                 Transaction Summary
+                                <SettingsButton />
                             </h1>
-                            <SettingsButton />
                         </div>
                     </div>
                     <Table striped bordered hover responsive>
@@ -67,8 +76,9 @@ const Transactions = () => {
                             }
                         </tbody>
                     </Table>
+                    <FloatingButton />
                 </div>
-                <FloatingButton />
+                
             </Container>
         </>
      );
