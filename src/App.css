@@ -4,11 +4,12 @@
 
 .top-padding {padding-top: 15px}
 
-.bottom-padding {padding-bottom: 10px}
+.bottom-padding {padding-bottom: 15px}
 
 .settings-button {
   display: inline;
   float: right;
+  height: 5vmin;
 }
 
 .inline-header {
