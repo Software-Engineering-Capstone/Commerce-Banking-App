@@ -6,6 +6,15 @@
 
 .bottom-padding {padding-bottom: 10px}
 
+.settings-button {
+  display: inline;
+  float: right;
+}
+
+.inline-header {
+  display: inline;
+}
+
 .App {
   text-align: center;
 }

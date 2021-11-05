@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { View, StyleSheet } from 'react-native'
 import {Button} from "react-bootstrap"
 import { useHistory} from "react-router-dom";
 import { useAuth } from '../context/AuthContext'
@@ -27,18 +26,10 @@ export default function SettingsButton() {
         }
 
         return (
-            <View style={[styles.container]}>
-                <Button variant="secondary" size="sm" onClick={handleLogout}>
+            <span className="settings-button">
+                <Button variant="secondary" onClick={handleLogout}>
                     <img src="settingscog3.png" alt="settings" width="35" height="35" />
                 </Button>
-            </View>
+            </span>
         )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        position: "absolute",
-        right: "1px",
-        top: "1px"
-    }
-});
