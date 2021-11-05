@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react"
 import { Form, Button, FloatingLabel, Col, Row, Container } from 'react-bootstrap'
-import { fireDb } from "../firebase";
+import { fireDb } from "../config/firebase";
 import { useHistory} from "react-router-dom";
 import SettingsButton from "./SettingsButton"
 
@@ -31,11 +31,7 @@ const TransactionForm = (props) => {
     const history = useHistory();
 
     var [values, setValues] = useState(initialFieldValues)
-<<<<<<< HEAD
-    var [currentId, setCurrentId] = useState('')
-=======
     var [, setCurrentId] = useState('')
->>>>>>> npm-fix-2
 
     // the name and value are properties of the elements on the page
     // they are used to populate the object that will be sent to the database via form submission

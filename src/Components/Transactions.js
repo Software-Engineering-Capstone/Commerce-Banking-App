@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Container, Table } from 'react-bootstrap'
 import { Dimensions } from "react-native"
-import { fireDb } from "../firebase"
+import { fireDb } from "../config/firebase"
 import FloatingButton from "./FloatingButton"
 import SettingsButton from "./SettingsButton"
 
