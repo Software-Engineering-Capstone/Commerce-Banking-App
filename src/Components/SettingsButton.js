@@ -12,13 +12,11 @@ export default function SettingsButton() {
         var width = Dimensions.get('window').width;
         var buttonSize;
 
-        console.log(width);
-
         // Button changes size depending on device
         if (width < 751) {
             buttonSize = "sm"
         } else {
-            buttonSize = "lg"
+            buttonSize = ""
         }
 
         async function handleLogout() {

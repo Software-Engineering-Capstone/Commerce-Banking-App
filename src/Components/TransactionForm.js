@@ -77,8 +77,12 @@ const TransactionForm = (props) => {
                 }
                 <div className="w-100" style={{ maxWidth: '600px'}}>
                     <div className="small-padding w-100">
-                        <h2>Transaction Form</h2>
-                        <SettingsButton />
+                        <div className="page-header bottom-padding-t-form">
+                            <h2 className="inline-header">
+                                Transaction Form 
+                                <SettingsButton />
+                            </h2>
+                        </div>
                         <Form autoComplete="off" onSubmit={handleFormSubmit}>
                             <Row>
                                 <Form.Group as={Col} id="accountType">
