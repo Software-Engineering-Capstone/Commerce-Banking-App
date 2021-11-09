@@ -1,12 +1,22 @@
-.commerce-bank-dark-green-background {background-color:#006747}
+.commerce-bank-dark-green-background {
+  background-color: #006747;
+}
 
-.small-padding {padding: 20px}
+.small-padding {
+  padding: 20px;
+}
 
-.top-padding {padding-top: 15px}
+.top-padding {
+  padding-top: 15px;
+}
 
-.bottom-padding {padding-bottom: 15px}
+.bottom-padding {
+  padding-bottom: 15px;
+}
 
-.bottom-padding-t-form {padding-bottom: 20px}
+.bottom-padding-t-form {
+  padding-bottom: 20px;
+}
 
 .settings-button {
   display: inline;
@@ -33,7 +43,6 @@
   }
 }
 
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -56,4 +65,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.customHeight {
+  min-height: 60vh;
 }
