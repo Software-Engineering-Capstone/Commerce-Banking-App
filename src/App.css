@@ -3,7 +3,7 @@
 }
 
 .small-padding {
-  padding: 20px;
+  padding-bottom: 15px;
 }
 
 .top-padding {
@@ -67,6 +67,11 @@
   }
 }
 
-.customHeight {
-  min-height: 60vh;
+.background {
+  background-image: url("https://i.natgeofe.com/n/a5ffa27b-ee99-44fe-8dc3-7b3e5fc9e378/downtown-cityscape-kansas-city-missouri_4x3.jpg ");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  outline: 3px solid red;
 }

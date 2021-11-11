@@ -3,7 +3,6 @@ import { Card, Form, Image, Button, Alert, Container } from "react-bootstrap"
 import { useAuth } from '../context/AuthContext'
 import { Link, useHistory} from "react-router-dom";
 
-
 export default function Login() {
     const emailRef = useRef();
     const passwordRef = useRef();
@@ -35,16 +34,17 @@ export default function Login() {
             // project for their classes that keep the child elements aligned in the center 
             // and flex with the page
         }
-    <Container className="d-flex align-items-center justify-content-center"
-                style={{minHeight: "100vh"}}>
-                <div className="w-100" style={{ maxWidth: '400px'}}>                
-                    <div class="small-padding">
-                        <Image src="fulllogo.png" class="commerce-bank-logo-padding" fluid />
-                    </div>
+
+<div class="background">
+    <Container className="d-flex align-items-center justify-content-center" 
+                    style={{minHeight: "100vh"}}>
+                <div className="w-100" style={{ maxWidth: '525px'}}>  
 
                     <Card>
                         <Card.Body>
+                            <Image src="fulllogo.png" class="commerce-bank-logo-padding" fluid />
                             <h3 className="text-center mb-4">Login</h3>
+                            
                             {error && <Alert variant="danger">{error}</Alert>}
                             <Form onSubmit={handleSubmit}>
                                 <Form.Group id="email">
@@ -60,12 +60,13 @@ export default function Login() {
                                 </div>
                             </Form>
                         </Card.Body>
-                    </Card>
-                    <div className="w-100 text-center mt-2">
+                        <div className="w-100 text-center mt-2 small-padding">
                         New to Commerce Bank? <Link to="./Signup">Create account </Link>
-                    </div>
+                        </div>
+                    </Card>
                 </div>
         </Container>
+    </div>
         </>
     )
 }
