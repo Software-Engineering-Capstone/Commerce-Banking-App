@@ -41,7 +41,7 @@ export default function Signup() {
         }
             <Container className="d-flex align-items-center 
             justify-content-center"
-            style={{mindHeight: "100vh"}}>
+            style={{minHeight: "100vh"}}>
                 <div className="w-100" style={{ maxWidth: '400px'}}>
                     <div class="small-padding">
                         <Image src="fulllogo.png" class="commerce-bank-logo-padding" fluid />

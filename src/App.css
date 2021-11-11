@@ -3,7 +3,7 @@
 }
 
 .small-padding {
-  padding-bottom: 15px;
+  padding-bottom: 20px;
 }
 
 .top-padding {
@@ -17,7 +17,6 @@
 .bottom-padding-t-form {
   padding-bottom: 20px;
 }
-
 .settings-button {
   display: inline;
   float: right;
@@ -65,13 +64,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.background {
-  background-image: url("https://i.natgeofe.com/n/a5ffa27b-ee99-44fe-8dc3-7b3e5fc9e378/downtown-cityscape-kansas-city-missouri_4x3.jpg ");
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  outline: 3px solid red;
 }

@@ -35,7 +35,7 @@ export default function Login() {
             // and flex with the page
         }
 
-<div class="background">
+<div class="commerce-bank-dark-green-background">
     <Container className="d-flex align-items-center justify-content-center" 
                     style={{minHeight: "100vh"}}>
                 <div className="w-100" style={{ maxWidth: '525px'}}>  
@@ -43,8 +43,8 @@ export default function Login() {
                     <Card>
                         <Card.Body>
                             <Image src="fulllogo.png" class="commerce-bank-logo-padding" fluid />
-                            <h3 className="text-center mb-4">Login</h3>
-                            
+                            <h3 className="text-center mb-4 ">Login</h3>
+
                             {error && <Alert variant="danger">{error}</Alert>}
                             <Form onSubmit={handleSubmit}>
                                 <Form.Group id="email">
@@ -55,7 +55,7 @@ export default function Login() {
                                     <Form.Label class="top-padding">Password</Form.Label>
                                     <Form.Control type="password" ref={passwordRef} required />
                                 </Form.Group>
-                                <div class="small-padding w-100">
+                                <div class="top-padding w-100">
                                     <Button disabled={loading} className="w-100" type="submit">Login</Button>
                                 </div>
                             </Form>
@@ -70,3 +70,7 @@ export default function Login() {
         </>
     )
 }
+
+/*
+FIXME: CENTER LOGIN BUTTON FOR BOTH SIGNIN AND LOGIN PAGES
+*/
