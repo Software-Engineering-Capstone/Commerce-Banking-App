@@ -54,7 +54,6 @@ function App() {
                     <></>
                 )}
                 <Notifications />
-                <Fader text="Hello React"></Fader>
             </div>
         </>
     )

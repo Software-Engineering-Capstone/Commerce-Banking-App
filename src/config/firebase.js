@@ -15,6 +15,7 @@ const firebaseConfig = {
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
+
 export const auth = firebase.auth();
 
 export const fireDb = firebaseApp.database().ref();
@@ -29,6 +30,7 @@ export const getToken = async (setTokenFound) => {
     currentToken = await fireMessage.getToken({vapidKey: "BECXrsxa0073RnL98pqpB5AzZ8swinN1FICLd24ZVyXoc6YUbfA0RWHCqfUHiMGAP3wD01y_J-uKVT7RRNCP8is"});
     if (currentToken) {
       setTokenFound(true);
+      console.log("Token set")
     } else {
       setTokenFound(false);
     }

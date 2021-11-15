@@ -6,6 +6,7 @@ const ReactNoficationComponent = ({ title, body }) => {
     toast.info(<Display />)
 
     function Display () {
+        console.log("React Notifcationnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn")
         return ( 
             <div>
                 <h4>{title}</h4>
