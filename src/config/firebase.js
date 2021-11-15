@@ -21,23 +21,19 @@ export const fireDb = firebaseApp.database().ref();
 
 export const fireMessage = firebase.messaging();
 
-export default firebaseApp;
-
-const { REACT_APP_VAPID_KEY } = process.env
-
-const publicKey = REACT_APP_VAPID_KEY;
+const publicKey = "BECXrsxa0073RnL98pqpB5AzZ8swinN1FICLd24ZVyXoc6YUbfA0RWHCqfUHiMGAP3wD01y_J-uKVT7RRNCP8is"
 
 export const getToken = async (setTokenFound) => {
   let currentToken = '';
   try {
-    currentToken = await fireMessage.getToken({vapidKey: publicKey});
+    currentToken = await fireMessage.getToken({vapidKey: "BECXrsxa0073RnL98pqpB5AzZ8swinN1FICLd24ZVyXoc6YUbfA0RWHCqfUHiMGAP3wD01y_J-uKVT7RRNCP8is"});
     if (currentToken) {
       setTokenFound(true);
     } else {
       setTokenFound(false);
     }
   } catch (error) {
-    console.log('An error occurred while retrieving token.', error);
+    console.log('An error occurred while retrieving token.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', error);
   }
   return currentToken;
 };
@@ -50,3 +46,4 @@ export const onMessageListener = () =>
   });
 
 
+  export default firebaseApp;
