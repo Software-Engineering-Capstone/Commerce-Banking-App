@@ -1,6 +1,7 @@
 import firebase  from "firebase/compat/app";
 import 'firebase/compat/auth';
 import 'firebase/compat/database';
+import 'firebase/compat/messaging';
 
 const firebaseConfig = {
     apiKey: "AIzaSyDOuFsyPtXaeMZuE-dZiGMftv-CTgKrj60",
@@ -18,4 +19,34 @@ export const auth = firebase.auth();
 
 export const fireDb = firebaseApp.database().ref();
 
+export const fireMessage = firebase.messaging();
+
 export default firebaseApp;
+
+const { REACT_APP_VAPID_KEY } = process.env
+
+const publicKey = REACT_APP_VAPID_KEY;
+
+export const getToken = async (setTokenFound) => {
+  let currentToken = '';
+  try {
+    currentToken = await fireMessage.getToken({vapidKey: publicKey});
+    if (currentToken) {
+      setTokenFound(true);
+    } else {
+      setTokenFound(false);
+    }
+  } catch (error) {
+    console.log('An error occurred while retrieving token.', error);
+  }
+  return currentToken;
+};
+
+export const onMessageListener = () =>
+  new Promise((resolve) => {
+    fireMessage.onMessage((payload) => {
+      resolve(payload);
+    });
+  });
+
+
