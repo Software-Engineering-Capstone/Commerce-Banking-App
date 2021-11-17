@@ -42,8 +42,8 @@ export default function Login() {
 
                     <Card>
                         <Card.Body>
-                            <Image src="fulllogo.png" class="commerce-bank-logo-padding" fluid />
-                            <h3 className="text-center mb-4 ">Login</h3>
+                        <Image src="fulllogo.png" class="commerce-bank-logo-padding" fluid />
+                            <h3 id="cardTitle" className="text-center mb-4 top-padding">Login</h3>
 
                             {error && <Alert variant="danger">{error}</Alert>}
                             <Form onSubmit={handleSubmit}>
@@ -55,8 +55,8 @@ export default function Login() {
                                     <Form.Label class="top-padding">Password</Form.Label>
                                     <Form.Control type="password" ref={passwordRef} required />
                                 </Form.Group>
-                                <div class="top-padding w-100">
-                                    <Button disabled={loading} className="w-100" type="submit">Login</Button>
+                                <div class="text-center top-padding">
+                                    <Button disabled={loading} className="w-75" type="submit">Login</Button>
                                 </div>
                             </Form>
                         </Card.Body>
@@ -67,7 +67,7 @@ export default function Login() {
                 </div>
         </Container>
     </div>
-        </>
+    </>
     )
 }
 

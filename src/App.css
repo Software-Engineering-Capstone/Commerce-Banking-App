@@ -9,6 +9,9 @@
 .top-padding {
   padding-top: 15px;
 }
+.top-padding #cardTitle {
+  padding-top: 20px;
+}
 
 .bottom-padding {
   padding-bottom: 15px;
