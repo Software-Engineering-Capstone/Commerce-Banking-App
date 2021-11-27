@@ -3,6 +3,7 @@ import { Form, Button, FloatingLabel, Col, Row, Container } from 'react-bootstra
 import { fireDb } from "../config/firebase";
 import { useHistory} from "react-router-dom";
 import SettingsButton from "./SettingsButton"
+import '../App.css';
 
 //
 // Look here for help with forms styling https://react-bootstrap.netlify.app/components/forms/
