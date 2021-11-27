@@ -7,6 +7,14 @@ Blue: #007AA3
 Yellow Orange: #FFB300
 Red: #E30000
 
+Font for Heading
+
+font-family: 'Poppins', sans-serif;
+
+Font for Body Text
+
+font-family: 'Open Sans', sans-serif;
+
 */
 
 
@@ -23,7 +31,6 @@ Red: #E30000
   align-items: center;
   justify-content: space-between;
   text-align: center;
-
 }
 
 .bottom-padding-t-form {padding-bottom: 20px}
@@ -32,11 +39,16 @@ Red: #E30000
   display: inline;
   float: right;
   height: 5vmin;
+  margin: 5px;
+  padding-bottom: 10px;
 }
 
 .inline-header {
   display: inline;
   color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 52px;
+  margin-bottom: 0px;
 }
 
 .App {
@@ -83,14 +95,14 @@ Red: #E30000
 
 .page-header {
   background-color:#006747;
-  /*padding: 10px 0; */
   padding-left: 10px;
+  padding-top: 10px;
 }
 
 .settings-button {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 thead {
@@ -99,3 +111,7 @@ thead {
   border-style: solid;
 }
 
+th {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}

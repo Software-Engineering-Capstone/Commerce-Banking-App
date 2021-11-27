@@ -52,7 +52,7 @@ const Transactions = () => {
                     <Table striped bordered hover responsive>
                         <thead >
                             <tr>
-                                <th >Account Type</th>
+                                <th>Account Type</th>
                                 <th>Account Id</th>
                                 <th>Amount</th>
                                 <th>Balance</th>
