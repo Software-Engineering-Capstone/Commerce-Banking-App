@@ -1,10 +1,30 @@
+/*  
+Commerce Bank Styling Colors
+
+Dark Green: #006747
+Green: #4FA800
+Blue: #007AA3
+Yellow Orange: #FFB300
+Red: #E30000
+
+*/
+
+
+
 .commerce-bank-dark-green-background {background-color:#006747}
 
 .small-padding {padding: 20px}
 
 .top-padding {padding-top: 15px}
 
-.bottom-padding {padding-bottom: 15px}
+.bottom-padding {
+  display: flex;
+  padding-bottom: 15px;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+
+}
 
 .bottom-padding-t-form {padding-bottom: 20px}
 
@@ -16,6 +36,7 @@
 
 .inline-header {
   display: inline;
+  color: white;
 }
 
 .App {
@@ -47,6 +68,7 @@
 
 .App-link {
   color: #61dafb;
+
 }
 
 @keyframes App-logo-spin {
@@ -57,3 +79,23 @@
     transform: rotate(360deg);
   }
 }
+
+
+.page-header {
+  background-color:#006747;
+  /*padding: 10px 0; */
+  padding-left: 10px;
+}
+
+.settings-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+thead {
+  background-color: #007AA3;
+  color: white;
+  border-style: solid;
+}
+
