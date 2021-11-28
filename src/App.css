@@ -27,7 +27,6 @@ font-family: 'Open Sans', sans-serif;
 
 .bottom-padding {
   display: flex;
-  padding-bottom: 15px;
   align-items: center;
   justify-content: space-between;
   text-align: center;
@@ -96,8 +95,7 @@ font-family: 'Open Sans', sans-serif;
 
 .page-header {
   background-color:#006747;
-  padding-left: 10px;
-  padding-top: 10px;
+  padding: 10px 10px 5px;
 }
 
 .settings-button {
@@ -109,7 +107,6 @@ font-family: 'Open Sans', sans-serif;
 thead {
   background-color: #007AA3;
   color: white;
-  border-style: solid;
   text-align: center;
 }
 
@@ -127,8 +124,19 @@ td {
 tbody {
   background-color: #e4e4e467;
   text-align: center;
+
 }
 
-.settings-button {
+.logout-button {
   background-color: #E30000;
+  color: rgb(41, 41, 41);
+  border-radius: 10%;
+  height: 70px;
+  width: 100px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border-style: solid;
+  border-color: rgb(54, 54, 54);
 }
+

@@ -36,10 +36,9 @@ export default function SettingsButton() {
         }
 
         return (
-            <span className="settings-button">
-                <button variant="secondary" size={buttonSize} onClick={handleLogout}>
-                    <img src="logout.png" alt="logout" width="35" height="35" />
+                
+                <button className="logout-button" onClick={handleLogout}>
+                    Logout <img src="logout.png" alt=""height="20px" width="auto"/>
                 </button>
-            </span>
         )
 }
