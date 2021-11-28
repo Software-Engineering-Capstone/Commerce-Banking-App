@@ -37,9 +37,9 @@ export default function SettingsButton() {
 
         return (
             <span className="settings-button">
-                <Button variant="secondary" size={buttonSize} onClick={handleLogout}>
-                    <img src="settingscog3.png" alt="settings" width="35" height="35" />
-                </Button>
+                <button variant="secondary" size={buttonSize} onClick={handleLogout}>
+                    <img src="logout.png" alt="logout" width="35" height="35" />
+                </button>
             </span>
         )
 }

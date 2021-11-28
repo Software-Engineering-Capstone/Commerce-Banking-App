@@ -49,6 +49,7 @@ font-family: 'Open Sans', sans-serif;
   font-family: 'Poppins', sans-serif;
   font-size: 52px;
   margin-bottom: 0px;
+  font-weight: 600;
 }
 
 .App {
@@ -109,9 +110,25 @@ thead {
   background-color: #007AA3;
   color: white;
   border-style: solid;
+  text-align: center;
 }
 
 th {
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
+}
+
+td {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+}
+
+tbody {
+  background-color: #e4e4e467;
+  text-align: center;
+}
+
+.settings-button {
+  background-color: #E30000;
 }
