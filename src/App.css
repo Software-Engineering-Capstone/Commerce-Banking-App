@@ -85,17 +85,11 @@ font-family: 'Open Sans', sans-serif;
   }
 }
 
-
 .page-header {
   background-color:#006747;
   padding: 10px 10px;
 }
 
-.settings-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
 
 thead {
   background-color: #007AA3;
