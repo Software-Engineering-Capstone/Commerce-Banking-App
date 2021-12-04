@@ -70,7 +70,3 @@ export default function Login() {
     </>
     )
 }
-
-/*
-FIXME: CENTER LOGIN BUTTON FOR BOTH SIGNIN AND LOGIN PAGES
-*/
