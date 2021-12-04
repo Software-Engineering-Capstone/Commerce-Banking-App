@@ -43,13 +43,13 @@ export default function Signup() {
         <Container className="d-flex align-items-center 
             justify-content-center"
             style={{minHeight: "100vh"}}>
-                <div className="w-100" style={{ maxWidth: '450px'}}>
+                <div className="w-100" style={{ maxWidth: '525px'}}>
                     <div class="small-padding">
                     </div>
                     <Card>
                         <Card.Body>
                         <Image src="fulllogo.png" class="commerce-bank-logo-padding" fluid />
-                            <h3 className="text-center mb-4 top-padding top-padding-large">Create a new account</h3>
+                            <h3 className="text-center mb-4 top-padding">Create a new account</h3>
                             {error && <Alert variant="danger">{error}</Alert>}
                             <Form onSubmit={handleSubmit}>
                                 <Form.Group id="email">
@@ -64,12 +64,12 @@ export default function Signup() {
                                     <Form.Label class="top-padding">Confirm Password</Form.Label>
                                     <Form.Control type="password" ref={passwordConfirmRef} required />
                                 </Form.Group>
-                                <div class="text-center small-padding w-100 top-padding">
+                                <div class="text-center w-100 top-padding">
                                     <Button disabled={loading} className="w-75" type="submit">Create Account</Button>
                                 </div> 
                             </Form>
                         </Card.Body>
-                        <div className="w-100 text-center mt-2">
+                        <div className="w-100 text-center mt-2 small-padding">
                         Already have an account? <Link to="./Login">Log in</Link>
                     </div>
                     </Card>
