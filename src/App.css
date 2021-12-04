@@ -35,7 +35,8 @@ font-family: 'Open Sans', sans-serif;
 .bottom-padding-t-form {padding-bottom: 20px}
 
 
-.inline-header {
+.inline-header,
+.form-title {
   display: inline;
   color: white;
   font-family: 'Poppins', sans-serif;
@@ -85,7 +86,8 @@ font-family: 'Open Sans', sans-serif;
   }
 }
 
-.page-header {
+.page-header,
+.form-header {
   background-color:#006747;
   padding: 10px 10px;
 }
@@ -140,4 +142,14 @@ tbody {
 
 .transaction-summary-header {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+
+/* Styling for Transaction Form Page -------------------- */ 
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 12px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
 }
