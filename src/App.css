@@ -39,7 +39,7 @@ font-family: 'Open Sans', sans-serif;
   display: inline;
   color: white;
   font-family: 'Poppins', sans-serif;
-  font-size: 52px;
+  font-size: 44px;
   margin-bottom: 0px;
   font-weight: 600;
 }
@@ -88,7 +88,7 @@ font-family: 'Open Sans', sans-serif;
 
 .page-header {
   background-color:#006747;
-  padding: 10px 10px 5px;
+  padding: 10px 10px;
 }
 
 .settings-button {
@@ -106,6 +106,7 @@ thead {
 th {
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
+  border-style: none;
 }
 
 td {
@@ -113,6 +114,7 @@ td {
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
 }
+
 
 tbody {
   background-color: #e4e4e467;
@@ -124,13 +126,24 @@ tbody {
   background-color: #E30000;
   color: rgb(41, 41, 41);
   border-radius: 10%;
-  height: 60px;
-  width: 100px;
   font-family: 'Poppins', sans-serif;
+  height: 50px;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
   border-style: solid;
   border-color: rgb(54, 54, 54);
   margin: 0px;
 }
 
+.logout-button:hover {
+  background-color: #e62727;
+}
+
+
+.table-body {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.transaction-summary-header {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}

@@ -39,8 +39,8 @@ const Transactions = () => {
             <Container className="d-flex align-items-center justify-content-center"
                 style={{mindHeight: "100vh"}}>
                     
-                <div className="w-100" style={{ maxWidth: '1000px'}}>
-                    <div>
+                <div className="table-body" style={{ maxWidth: '1000px'}}>
+                    <div class="transaction-summary-header">
                         <div class={headerPadding}>
                         <Image className="header-text" src="small-white-logo.jpg" class="commerce-bank-logo-padding" fluid />
                             <h1 className="inline-header"> Transaction Summary</h1>
