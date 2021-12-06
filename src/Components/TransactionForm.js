@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react"
-import { Form, Button, FloatingLabel, Col, Row, Container } from 'react-bootstrap'
+import { Form, FloatingLabel, Col, Row, Container } from 'react-bootstrap'
 import { fireDb } from "../config/firebase";
 import { useHistory} from "react-router-dom";
 //import SettingsButton from "./SettingsButton"
@@ -95,7 +95,7 @@ const TransactionForm = (props) => {
                                     <Form.Group as={Col} id="acctId">
                                         <FloatingLabel controlId="floatingInputGrid" label="Account ID">
                                             <Form.Control onChange={handleInputChange} name="Acct-id" value={values["Acct-id"]} type="text" 
-                                            placeholder="Account ID" ref={acctId} required />
+                                            placeholder="Accounat ID" ref={acctId} required />
                                         </FloatingLabel>
                                     </Form.Group>
                                 </Row>
@@ -136,7 +136,7 @@ const TransactionForm = (props) => {
                                     </Form.Group>
                                 </Row>
                                 <div className="top-padding w-100">
-                                    <Button type="submit">Submit</Button>
+                                    <button className="form-button" type="submit">Submit</button>
                                 </div> 
                             </Form>
 

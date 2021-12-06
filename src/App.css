@@ -152,4 +152,28 @@ tbody {
   padding: 12px;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
+  color: rgb(148, 148, 148);
 }
+
+.form-header {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 44px;
+  padding: 14px;
+}
+
+.form-button {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #007AA3;
+  width: 480px;
+  height: 40px;
+  border-style: none;
+}
+
+.form-button:hover {
+  background-color: #4eaac9;
+}
+
