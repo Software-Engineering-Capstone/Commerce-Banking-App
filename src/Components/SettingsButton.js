@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Button} from "react-bootstrap"
+// import {Button} from "react-bootstrap"
 import { useHistory} from "react-router-dom"
 import { useAuth } from '../context/AuthContext'
 import { Dimensions } from "react-native"
@@ -18,12 +18,13 @@ export default function SettingsButton() {
         } else {
             buttonSize = ""
         }
+        
 
         async function handleLogout() {
             setError('') 
 
             try {
-                // 
+                
                 setLoading(true)
                 await logout()
                 history.push("/Login")
@@ -36,10 +37,9 @@ export default function SettingsButton() {
         }
 
         return (
-            <span className="settings-button">
-                <Button variant="secondary" size={buttonSize} onClick={handleLogout}>
-                    <img src="settingscog3.png" alt="settings" width="35" height="35" />
-                </Button>
-            </span>
+                
+                <button className="logout-button" size={buttonSize} onClick={handleLogout}>
+                    Logout <img src="sign-out.svg" alt="logout"height="20px" width="auto"/>
+                </button>
         )
 }
