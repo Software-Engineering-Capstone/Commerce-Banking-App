@@ -21,9 +21,18 @@ font-family: 'Open Sans', sans-serif;
 
 .commerce-bank-dark-green-background {background-color:#006747}
 
-.small-padding {padding: 20px}
+.small-padding {
+  padding-bottom: 20px;
+}
 
-.top-padding {padding-top: 15px}
+.top-padding {
+  padding-top: 15px;
+}
+
+
+.top-padding-large {
+  padding-top: 50px;
+}
 
 .bottom-padding {
   display: flex;
@@ -32,8 +41,18 @@ font-family: 'Open Sans', sans-serif;
   text-align: center;
 }
 
-.bottom-padding-t-form {padding-bottom: 20px}
+.bottom-padding {
+  padding-bottom: 15px;
+}
 
+.bottom-padding-t-form {
+  padding-bottom: 20px;
+}
+.settings-button {
+  display: inline;
+  float: right;
+  height: 5vmin;
+}
 
 .inline-header,
 .form-title {
@@ -59,7 +78,6 @@ font-family: 'Open Sans', sans-serif;
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 
 .App-header {
   background-color: #282c34;
