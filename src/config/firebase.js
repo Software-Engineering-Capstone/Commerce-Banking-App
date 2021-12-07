@@ -22,8 +22,6 @@ export const fireDb = firebaseApp.database().ref();
 
 export const fireMessage = firebase.messaging();
 
-const publicKey = "BECXrsxa0073RnL98pqpB5AzZ8swinN1FICLd24ZVyXoc6YUbfA0RWHCqfUHiMGAP3wD01y_J-uKVT7RRNCP8is"
-
 export const getToken = async (setTokenFound) => {
   let currentToken = '';
   try {

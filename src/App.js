@@ -8,7 +8,6 @@ import PrivateRoute from "./Components/PrivateRoute"
 import TransactionForm from './Components/TransactionForm'
 import Notifications from './Components/Notifications'
 import ReactNoficationComponent from './Components/ReactNotification'
-import Fader from './Components/Fader'
 import { onMessageListener } from "./config/firebase";
 
 import { AuthProvider } from './context/AuthContext';
