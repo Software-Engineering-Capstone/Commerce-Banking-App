@@ -3,7 +3,6 @@ import { Card, Form, Image, Button, Alert, Container } from "react-bootstrap"
 import { useAuth } from '../context/AuthContext'
 import { Link, useHistory} from "react-router-dom";
 
-
 export default function Login() {
     const emailRef = useRef();
     const passwordRef = useRef();
@@ -35,17 +34,17 @@ export default function Login() {
             // project for their classes that keep the child elements aligned in the center 
             // and flex with the page
         }
-            <Container className="d-flex align-items-center 
-                justify-content-center"
-                style={{mindHeight: "100vh"}}>
-                <div className="w-100" style={{ maxWidth: '400px'}}>
-                    <div class="small-padding">
-                        <Image src="fulllogo.png" class="commerce-bank-logo-padding" fluid />
-                    </div>
+
+<div class="commerce-bank-dark-green-background">
+    <Container className="d-flex align-items-center justify-content-center" 
+                    style={{minHeight: "100vh"}}>
+                <div className="w-100" style={{ maxWidth: '525px'}}>  
 
                     <Card>
                         <Card.Body>
-                            <h3 className="text-center mb-4">Login</h3>
+                        <Image src="fulllogo.png" class="commerce-bank-logo-padding" fluid />
+                            <h3 id="cardTitle" className="text-center mb-4 top-padding">Login</h3>
+
                             {error && <Alert variant="danger">{error}</Alert>}
                             <Form onSubmit={handleSubmit}>
                                 <Form.Group id="email">
@@ -56,18 +55,18 @@ export default function Login() {
                                     <Form.Label class="top-padding">Password</Form.Label>
                                     <Form.Control type="password" ref={passwordRef} required />
                                 </Form.Group>
-                                <div class="small-padding w-100">
-                                    <Button disabled={loading} className="w-100" type="submit">Login</Button>
+                                <div class="text-center top-padding">
+                                    <Button disabled={loading} className="w-75" type="submit">Login</Button>
                                 </div>
                             </Form>
                         </Card.Body>
-                    </Card>
-                    <div className="w-100 text-center mt-2">
-
+                        <div className="w-100 text-center mt-2 small-padding">
                         New to Commerce Bank? <Link to="./Signup">Create account </Link>
-                    </div>
+                        </div>
+                    </Card>
                 </div>
         </Container>
-        </>
+    </div>
+    </>
     )
 }

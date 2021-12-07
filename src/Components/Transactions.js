@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Container, Table } from 'react-bootstrap'
+import { Container, Table, Image } from 'react-bootstrap'
 import { Dimensions } from "react-native"
 import { fireDb } from "../config/firebase"
 import FloatingButton from "./FloatingButton"
@@ -39,13 +39,14 @@ const Transactions = () => {
             <Container className="d-flex align-items-center justify-content-center"
                 style={{mindHeight: "100vh"}}>
                     
-                <div className="w-100" style={{ maxWidth: '1000px'}}>
-                    <div>
+                <div className="table-body" style={{ maxWidth: '1000px'}}>
+                    <div class="transaction-summary-header">
                         <div class={headerPadding}>
-                            <h1 className="inline-header">
-                                Transaction Summary
-                                <SettingsButton />
-                            </h1>
+                        <Image className="header-text" src="small-white-logo.jpg" class="commerce-bank-logo-padding" fluid />
+                            <h1 className="inline-header"> Transaction Summary</h1>
+                            <div className="settings-button">
+                            <SettingsButton />
+                            </div>
                         </div>
                     </div>
                     <Table striped bordered hover responsive>

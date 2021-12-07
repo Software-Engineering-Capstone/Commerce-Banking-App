@@ -1,21 +1,67 @@
+/*  
+Commerce Bank Styling Colors
+
+Dark Green: #006747
+Green: #4FA800
+Blue: #007AA3
+Yellow Orange: #FFB300
+Red: #E30000
+
+Font for Heading
+
+font-family: 'Poppins', sans-serif;
+
+Font for Body Text
+
+font-family: 'Open Sans', sans-serif;
+
+*/
+
+
+
 .commerce-bank-dark-green-background {background-color:#006747}
 
-.small-padding {padding: 20px}
+.small-padding {
+  padding-bottom: 20px;
+}
 
-.top-padding {padding-top: 15px}
+.top-padding {
+  padding-top: 15px;
+}
 
-.bottom-padding {padding-bottom: 15px}
 
-.bottom-padding-t-form {padding-bottom: 20px}
+.top-padding-large {
+  padding-top: 50px;
+}
 
+.bottom-padding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.bottom-padding {
+  padding-bottom: 15px;
+}
+
+.bottom-padding-t-form {
+  padding-bottom: 20px;
+}
 .settings-button {
   display: inline;
   float: right;
   height: 5vmin;
 }
 
-.inline-header {
+.inline-header,
+.form-title {
   display: inline;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 44px;
+  margin-bottom: 0px;
+  font-weight: 600;
 }
 
 .App {
@@ -33,7 +79,6 @@
   }
 }
 
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -47,6 +92,7 @@
 
 .App-link {
   color: #61dafb;
+
 }
 
 @keyframes App-logo-spin {
@@ -57,3 +103,96 @@
     transform: rotate(360deg);
   }
 }
+
+.page-header,
+.form-header {
+  background-color:#006747;
+  padding: 10px 10px;
+}
+
+
+thead {
+  background-color: #007AA3;
+  color: white;
+  text-align: center;
+}
+
+th {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  border-style: none;
+}
+
+td {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+}
+
+
+tbody {
+  background-color: #e4e4e467;
+  text-align: center;
+
+}
+
+.logout-button {
+  background-color: #E30000;
+  color: rgb(41, 41, 41);
+  border-radius: 10%;
+  font-family: 'Poppins', sans-serif;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  border-style: solid;
+  border-color: rgb(54, 54, 54);
+  margin: 0px;
+}
+
+.logout-button:hover {
+  background-color: #e62727;
+}
+
+
+.table-body {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.transaction-summary-header {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+
+/* Styling for Transaction Form Page -------------------- */ 
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 12px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: rgb(148, 148, 148);
+  margin-top: 10px;
+}
+
+.form-header {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 44px;
+  padding: 14px;
+}
+
+.form-button {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #007AA3;
+  width: 480px;
+  height: 40px;
+  border-style: none;
+}
+
+.form-button:hover {
+  background-color: #4eaac9;
+}
+
