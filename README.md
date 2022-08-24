@@ -2,15 +2,6 @@
 This is school sponsored project where we are working with Commerce Bank to develop a banking app which will facilitate us learning software engineering practices.
 
 Project Description:
-**Our Team**
-
-Natalie Taylor – Campus Recruiter – [Natalie.Taylor@commercebank.com](mailto:Natalie.Taylor@commercebank.com)
-
-Binh Mai – UX/Tech Mentor – [Binh.Mai@commercebank.com](mailto:Binh.Mai@commercebank.com)
-
-Natalie Jenkins – UX/Tech Mentor – [Natalie.Jenkins@commercebank.com](mailto:Natalie.Jenkins@commercebank.com)
-
-Molly Gilstrap – UX/Tech Mentor –[Molly.Gilstrap@CommerceBank.com](mailto:molly.gilstrap@CommerceBank.com)
 
 \*We highly recommend you reach out to any of the tech mentors with any questions or concerns throughout the semester. They will be available via email or Slack.
 
