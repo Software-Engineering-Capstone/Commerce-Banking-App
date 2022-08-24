@@ -1,9 +1,9 @@
 # Commerce-Banking-App
 This is school sponsored project where we are working with Commerce Bank to develop a banking app which will facilitate us learning software engineering practices.
 
-Project Description:
+[Commerce Banking App Website](https://my-commerce-bank.netlify.app/)
 
-\*We highly recommend you reach out to any of the tech mentors with any questions or concerns throughout the semester. They will be available via email or Slack.
+Project Description:
 
 **High Level Overview**
 
