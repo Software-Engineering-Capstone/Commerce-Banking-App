@@ -3,6 +3,8 @@ This is school sponsored project where we are working with Commerce Bank to deve
 
 [Commerce Banking App Website](https://my-commerce-bank.netlify.app/)
 
+[Video Demo and Final Presentation](https://youtu.be/wtZLa3MB2Rc)
+
 Project Description:
 
 **High Level Overview**
