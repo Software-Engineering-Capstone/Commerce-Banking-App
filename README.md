@@ -1,7 +1,7 @@
 # Commerce-Banking-App
 This is school sponsored project where we are working with Commerce Bank to develop a banking app which will facilitate us learning software engineering practices.
 
-[Commerce Banking App Website](https://my-commerce-bank.netlify.app/)
+[Commerce Banking App Website](https://my-commerce-bank.netlify.app/) - no longer accessible
 
 [Video Demo and Final Presentation](https://youtu.be/wtZLa3MB2Rc)
 
